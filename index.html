@@ -117,47 +117,39 @@ body{
 }
 
 .agree-side{
-
     width:50%;
-
     background:#FF9996;
-
     transition:width .6s;
-
-   /* 1. 百分比文字顯示與對齊 */
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    padding-left:12px;
-    font-size:14px;
-    font-weight:bold;
-    color:#fff;
-    white-space:nowrap;
-    box-sizing:border-box;
-    min-width: fit-content; /* 防止極端比例時文字被壓扁 */
+    height:100%;
 }
 
 .disagree-side{
-
     width:50%;
-
     background:#12AAB0;
-
     transition:width .6s;
-
-  /* 1. 百分比文字顯示與對齊 */
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    padding-right:12px;
-    font-size:14px;
-    font-weight:bold;
-    color:#fff;
-    white-space:nowrap;
-    box-sizing:border-box;
-    min-width: fit-content;
+    height:100%;
 }
 
+/* ★ 強制浮動在長條圖兩端的百分比文字 */
+.percent-text{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:13px;
+    font-weight:bold;
+    color:#ffffff;
+    text-shadow:0px 1px 3px rgba(0, 0, 0, 0.8); /* 強化陰影，確保粉紅背景看得清 */
+    pointer-events:none;
+    z-index:2;
+}
+
+.agree-percent-pos{
+    left:12px;
+}
+
+.disagree-percent-pos{
+    right:12px;
+}
 
 /* =========================
    人數
