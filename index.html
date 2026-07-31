@@ -103,7 +103,7 @@ body{
 .dual-bar{
 
     width:100%;
-    height:34px;
+    height:22px;
 
     border-radius:999px;
     overflow:hidden;
@@ -120,6 +120,17 @@ body{
     background:#FF9996;
 
     transition:width .6s;
+
+   /* 3. 百分比文字靠左排版 */
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    padding-left:10px;
+    font-size:12px;
+    font-weight:bold;
+    color:#fff;
+    white-space:nowrap;
+    overflow:hidden;
 }
 
 .disagree-side{
@@ -129,6 +140,17 @@ body{
     background:#12AAB0;
 
     transition:width .6s;
+
+   /* 3. 百分比文字靠右排版 */
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    padding-right:10px;
+    font-size:12px;
+    font-weight:bold;
+    color:#fff;
+    white-space:nowrap;
+    overflow:hidden;
 }
 
 
@@ -144,11 +166,15 @@ body{
 
     justify-content:space-between;
 
-    font-size:16px;
+    /* 2. 人數文字變大變清楚 */
+    font-size:22px; 
+    font-weight:bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .count-row span{
-    font-weight:bold;
+    font-size:26px; /* 讓數字部分比文字更顯眼 */
+    margin: 0 4px;
 }
 
 </style>
